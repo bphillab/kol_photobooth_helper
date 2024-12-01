@@ -10,4 +10,15 @@ export function checkMP(): string {
 
 export function main(): void {
   print(checkMP());
+
+  // Step 1: Get photobooth supply list
+  // Step 2: Find baron
+  // Step 3: Fight baron, first check for photobooth supplies then autokill
+  // Step 4: Find Beelzebozo
+  //  Unlock Guild?
+  //  Start first quest
+  //  Finish first quest
+  //  Start second quest
+  //  Reach Beelzebozo
+  //  Fight Beelzebozo, first check for photobooth supplies then autokill
 }
