@@ -4,8 +4,8 @@ export function find_baron():void{
     return;
 }
 
-export function fight_baron(column:number, row:number):void {
+/*export function fight_baron(column:number, row:number):void {
     //let baron_location = 5*row + column;
     //adv1(toLocation(baron_location));
     return;
-}
+}*/
