@@ -6,7 +6,7 @@ export function unlockGuild(): void
     return;
 }
 
-export function getFirstQuest():void
+export function getQuest():void
 {
     visitUrl( "guild.php?place=scg" ); // Talk to guild member to get welcome message
     visitUrl( "guild.php?place=scg" ); // Get first quest
@@ -30,6 +30,10 @@ export function completeFirstQuest():void {
     return;
 }
 
+export function getSecondQuest():void {
+    visitUrl("guild.php?place=scg");
+    visitUrl("guild.php?place=scg");
+}
 
 export function completeSecondQuest():void {
     cliExecute("maximize clownosity");
