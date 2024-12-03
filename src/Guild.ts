@@ -30,11 +30,6 @@ export function completeFirstQuest():void {
     return;
 }
 
-export function getSecondQuest():void {
-    visitUrl("guild.php?place=scg");
-    visitUrl("guild.php?place=scg");
-}
-
 export function completeSecondQuest():void {
     cliExecute("maximize clownosity");
     equip(toItem("photo booth supply list"));
