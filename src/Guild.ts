@@ -15,7 +15,7 @@ export function getQuest():void
 
 export function completeFirstQuest():void {
     let adv_used = 0;
-    while (getProperty("questG04Nemesis") === "step1" && adv_used < 10) {
+    while (getProperty("questG04Nemesis") === "step1" && adv_used < 20) {
         adv_used++; // increment to sanity check/not use all adventures on this part
         adv1(toLocation(21)) // adventure in the unquiet garves
         //Add break condition!
