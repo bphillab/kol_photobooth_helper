@@ -1,4 +1,4 @@
-import {adv1, cliExecute, equip, getProperty, toItem, toLocation, visitUrl} from "kolmafia";
+import { adventure, cliExecute, equip, getProperty, setProperty, toItem, toLocation, visitUrl } from "kolmafia";
 
 export function unlockGuild(): void
 {
@@ -17,7 +17,7 @@ export function completeFirstQuest():void {
     let adv_used = 0;
     while (getProperty("questG04Nemesis") === "step1" && adv_used < 20) {
         adv_used++; // increment to sanity check/not use all adventures on this part
-        adv1(toLocation(21)) // adventure in the unquiet garves
+        adventure(1,toLocation(21)) // adventure in the unquiet garves
         //Add break condition!
     }
     if (getProperty("questG04Nemesis") === "step2") {
@@ -33,7 +33,14 @@ export function completeFirstQuest():void {
 export function completeSecondQuest():void {
     cliExecute("maximize clownosity");
     equip(toItem("photo booth supply list"));
-    // adventure in fun house until you hit beelzebozo
-    // start fight with beelzebozo by searching for supplies then beat him up
+    setProperty("choiceAdventure151","0"); // Break
+    setProperty("choiceAdventure152","0"); // Break
+    let adv_used = 0
+    while( getProperty("questG04Nemesis") === "step 5" &&adv_used < 20 ) {
+        // Spend up to 20 turns adventuring in fun house until hit Beelzebozo
+        // then break.
+        adv_used++;
+        adventure(1,toLocation(20));
+    }
     return;
 }
