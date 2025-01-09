@@ -15,7 +15,7 @@ export function getQuest():void
 
 export function completeFirstQuest():void {
     let adv_used = 0;
-    while (getProperty("questG04Nemesis") === "step1" && adv_used < 20) {
+    while (getProperty("questG04Nemesis") === "started" && adv_used < 20) {
         adv_used++; // increment to sanity check/not use all adventures on this part
         adventure(1,toLocation(21)) // adventure in the unquiet garves
         //Add break condition!
@@ -36,7 +36,7 @@ export function completeSecondQuest():void {
     setProperty("choiceAdventure151","0"); // Break
     setProperty("choiceAdventure152","0"); // Break
     let adv_used = 0
-    while( getProperty("questG04Nemesis") === "step 5" &&adv_used < 20 ) {
+    while( getProperty("questG04Nemesis") === "step5" &&adv_used < 20 ) {
         // Spend up to 20 turns adventuring in fun house until hit Beelzebozo
         // then break.
         adv_used++;
