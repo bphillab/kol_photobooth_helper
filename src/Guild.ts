@@ -36,7 +36,7 @@ export function completeSecondQuest():void {
     setProperty("choiceAdventure151","0"); // Break
     setProperty("choiceAdventure152","0"); // Break
     let adv_used = 0
-    while( getProperty("questG04Nemesis") === "step5" &&adv_used < 20 ) {
+    while( getProperty("questG04Nemesis") === "step5" && adv_used < 20 ) {
         // Spend up to 20 turns adventuring in fun house until hit Beelzebozo
         // then break.
         adv_used++;
